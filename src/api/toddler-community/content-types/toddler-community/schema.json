@@ -1,0 +1,69 @@
+{
+  "kind": "singleType",
+  "collectionName": "toddler_communities",
+  "info": {
+    "singularName": "toddler-community",
+    "pluralName": "toddler-communities",
+    "displayName": "Toddler Community",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "intro_text": {
+      "type": "richtext"
+    },
+    "block_1_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "block_1_text": {
+      "type": "richtext"
+    },
+    "slider": {
+      "type": "json"
+    },
+    "block_2_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "block_2_text": {
+      "type": "richtext"
+    },
+    "image_gallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

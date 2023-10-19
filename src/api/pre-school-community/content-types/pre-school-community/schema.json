@@ -1,0 +1,67 @@
+{
+  "kind": "singleType",
+  "collectionName": "pre_school_communities",
+  "info": {
+    "singularName": "pre-school-community",
+    "pluralName": "pre-school-communities",
+    "displayName": "Pre-School Community"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "intro_text": {
+      "type": "richtext"
+    },
+    "block_1_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "block_1_text": {
+      "type": "richtext"
+    },
+    "slider": {
+      "type": "json"
+    },
+    "block_2_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "block_2_text": {
+      "type": "richtext"
+    },
+    "image_gallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

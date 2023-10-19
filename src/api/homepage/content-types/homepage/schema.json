@@ -4,7 +4,8 @@
   "info": {
     "singularName": "homepage",
     "pluralName": "homepages",
-    "displayName": "Homepage"
+    "displayName": "Homepage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -12,55 +13,90 @@
   "pluginOptions": {},
   "attributes": {
     "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "about": {
-      "type": "text"
+      ]
     },
     "toddler_community_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "toddler_community_text": {
-      "type": "text"
+      ]
     },
     "pre_school_community_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "pre_school_community_text": {
-      "type": "text"
+      ]
     },
     "aftercare_programme_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "about": {
+      "type": "richtext"
+    },
+    "toddler_community_text": {
+      "type": "richtext"
+    },
+    "pre_school_community_text": {
+      "type": "richtext"
     },
     "aftercare_programme_text": {
-      "type": "text"
+      "type": "richtext"
+    },
+    "holiday_programme_text": {
+      "type": "richtext"
+    },
+    "playgroup_text": {
+      "type": "richtext"
+    },
+    "holiday_programme_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "playgroup_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slider": {
+      "type": "json"
     }
   }
 }

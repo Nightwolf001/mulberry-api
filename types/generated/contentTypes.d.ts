@@ -362,42 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiHomepageHomepage extends Schema.SingleType {
-  collectionName: 'homepages';
-  info: {
-    singularName: 'homepage';
-    pluralName: 'homepages';
-    displayName: 'Homepage';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    hero_image: Attribute.Media;
-    about: Attribute.Text;
-    toddler_community_image: Attribute.Media;
-    toddler_community_text: Attribute.Text;
-    pre_school_community_image: Attribute.Media;
-    pre_school_community_text: Attribute.Text;
-    aftercare_programme_image: Attribute.Media;
-    aftercare_programme_text: Attribute.Text;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::homepage.homepage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::homepage.homepage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -713,6 +677,159 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAftercareProgrammeAftercareProgramme
+  extends Schema.SingleType {
+  collectionName: 'aftercare_programmes';
+  info: {
+    singularName: 'aftercare-programme';
+    pluralName: 'aftercare-programmes';
+    displayName: 'Aftercare programme';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    intro_text: Attribute.RichText;
+    hero_image: Attribute.Media;
+    block_1_image: Attribute.Media;
+    block_1_text: Attribute.RichText;
+    slider: Attribute.JSON;
+    block_2_image: Attribute.Media;
+    block_2_text: Attribute.RichText;
+    image_gallery: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::aftercare-programme.aftercare-programme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::aftercare-programme.aftercare-programme',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomepageHomepage extends Schema.SingleType {
+  collectionName: 'homepages';
+  info: {
+    singularName: 'homepage';
+    pluralName: 'homepages';
+    displayName: 'Homepage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    hero_image: Attribute.Media;
+    toddler_community_image: Attribute.Media;
+    pre_school_community_image: Attribute.Media;
+    aftercare_programme_image: Attribute.Media;
+    about: Attribute.RichText;
+    toddler_community_text: Attribute.RichText;
+    pre_school_community_text: Attribute.RichText;
+    aftercare_programme_text: Attribute.RichText;
+    holiday_programme_text: Attribute.RichText;
+    playgroup_text: Attribute.RichText;
+    holiday_programme_image: Attribute.Media;
+    playgroup_image: Attribute.Media;
+    slider: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::homepage.homepage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::homepage.homepage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPreSchoolCommunityPreSchoolCommunity
+  extends Schema.SingleType {
+  collectionName: 'pre_school_communities';
+  info: {
+    singularName: 'pre-school-community';
+    pluralName: 'pre-school-communities';
+    displayName: 'Pre-School Community';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    hero_image: Attribute.Media;
+    intro_text: Attribute.RichText;
+    block_1_image: Attribute.Media;
+    block_1_text: Attribute.RichText;
+    slider: Attribute.JSON;
+    block_2_image: Attribute.Media;
+    block_2_text: Attribute.RichText;
+    image_gallery: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::pre-school-community.pre-school-community',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::pre-school-community.pre-school-community',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiToddlerCommunityToddlerCommunity extends Schema.SingleType {
+  collectionName: 'toddler_communities';
+  info: {
+    singularName: 'toddler-community';
+    pluralName: 'toddler-communities';
+    displayName: 'Toddler Community';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    hero_image: Attribute.Media;
+    intro_text: Attribute.RichText;
+    block_1_image: Attribute.Media;
+    block_1_text: Attribute.RichText;
+    slider: Attribute.JSON;
+    block_2_image: Attribute.Media;
+    block_2_text: Attribute.RichText;
+    image_gallery: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::toddler-community.toddler-community',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::toddler-community.toddler-community',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -723,13 +840,16 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::homepage.homepage': ApiHomepageHomepage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::aftercare-programme.aftercare-programme': ApiAftercareProgrammeAftercareProgramme;
+      'api::homepage.homepage': ApiHomepageHomepage;
+      'api::pre-school-community.pre-school-community': ApiPreSchoolCommunityPreSchoolCommunity;
+      'api::toddler-community.toddler-community': ApiToddlerCommunityToddlerCommunity;
     }
   }
 }

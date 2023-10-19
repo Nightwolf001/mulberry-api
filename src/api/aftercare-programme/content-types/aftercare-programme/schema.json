@@ -1,0 +1,67 @@
+{
+  "kind": "singleType",
+  "collectionName": "aftercare_programmes",
+  "info": {
+    "singularName": "aftercare-programme",
+    "pluralName": "aftercare-programmes",
+    "displayName": "Aftercare programme"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "intro_text": {
+      "type": "richtext"
+    },
+    "hero_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "block_1_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "block_1_text": {
+      "type": "richtext"
+    },
+    "slider": {
+      "type": "json"
+    },
+    "block_2_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "block_2_text": {
+      "type": "richtext"
+    },
+    "image_gallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

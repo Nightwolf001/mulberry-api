@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_staff_gallery_staff_galleries",
+  "info": {
+    "displayName": "staff_gallery",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "staff_image": {
+      "type": "component",
+      "repeatable": true,
+      "component": "staff-image.staff-image"
+    },
+    "section": {
+      "type": "string"
+    }
+  }
+}

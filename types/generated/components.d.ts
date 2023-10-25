@@ -28,11 +28,37 @@ export interface RegRegistrationFees extends Schema.Component {
   };
 }
 
+export interface StaffGalleryStaffGallery extends Schema.Component {
+  collectionName: 'components_staff_gallery_staff_galleries';
+  info: {
+    displayName: 'staff_gallery';
+    icon: 'apps';
+  };
+  attributes: {
+    staff_image: Attribute.Component<'staff-image.staff-image', true>;
+    section: Attribute.String;
+  };
+}
+
+export interface StaffImageStaffImage extends Schema.Component {
+  collectionName: 'components_staff_image_staff_images';
+  info: {
+    displayName: 'staff_image';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    image: Attribute.Media;
+    title: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'fees.registration-fees': FeesRegistrationFees;
       'reg.registration-fees': RegRegistrationFees;
+      'staff-gallery.staff-gallery': StaffGalleryStaffGallery;
+      'staff-image.staff-image': StaffImageStaffImage;
     }
   }
 }

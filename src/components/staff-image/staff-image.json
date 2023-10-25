@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_staff_image_staff_images",
+  "info": {
+    "displayName": "staff_image",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

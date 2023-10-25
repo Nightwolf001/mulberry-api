@@ -829,6 +829,37 @@ export interface ApiPreSchoolCommunityPreSchoolCommunity
   };
 }
 
+export interface ApiStaffStaff extends Schema.SingleType {
+  collectionName: 'staffs';
+  info: {
+    singularName: 'staff';
+    pluralName: 'staffs';
+    displayName: 'Staff';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    staff_gallery: Attribute.Component<'staff-gallery.staff-gallery', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::staff.staff',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::staff.staff',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiToddlerCommunityToddlerCommunity extends Schema.SingleType {
   collectionName: 'toddler_communities';
   info: {
@@ -886,6 +917,7 @@ declare module '@strapi/types' {
       'api::aftercare-programme.aftercare-programme': ApiAftercareProgrammeAftercareProgramme;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::pre-school-community.pre-school-community': ApiPreSchoolCommunityPreSchoolCommunity;
+      'api::staff.staff': ApiStaffStaff;
       'api::toddler-community.toddler-community': ApiToddlerCommunityToddlerCommunity;
     }
   }

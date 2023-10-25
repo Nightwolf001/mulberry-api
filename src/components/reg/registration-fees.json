@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_reg_registration_fees",
+  "info": {
+    "displayName": "registration_fees",
+    "icon": "connector"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

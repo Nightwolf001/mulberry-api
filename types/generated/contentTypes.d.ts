@@ -677,6 +677,42 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAdmissionsAdmissions extends Schema.SingleType {
+  collectionName: 'admissionss';
+  info: {
+    singularName: 'admissions';
+    pluralName: 'admissionss';
+    displayName: 'Admissions';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    hero_image: Attribute.Media;
+    intro_text: Attribute.RichText;
+    body_text: Attribute.RichText;
+    infant_fees: Attribute.Component<'fees.registration-fees', true>;
+    pre_school_fees: Attribute.Component<'fees.registration-fees', true>;
+    aftercare_fees: Attribute.Component<'fees.registration-fees', true>;
+    registration_fees: Attribute.Component<'reg.registration-fees', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::admissions.admissions',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::admissions.admissions',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAftercareProgrammeAftercareProgramme
   extends Schema.SingleType {
   collectionName: 'aftercare_programmes';
@@ -846,6 +882,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::admissions.admissions': ApiAdmissionsAdmissions;
       'api::aftercare-programme.aftercare-programme': ApiAftercareProgrammeAftercareProgramme;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::pre-school-community.pre-school-community': ApiPreSchoolCommunityPreSchoolCommunity;

@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "admissionss",
+  "info": {
+    "singularName": "admissions",
+    "pluralName": "admissionss",
+    "displayName": "Admissions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "intro_text": {
+      "type": "richtext"
+    },
+    "body_text": {
+      "type": "richtext"
+    },
+    "infant_fees": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fees.registration-fees"
+    },
+    "pre_school_fees": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fees.registration-fees"
+    },
+    "aftercare_fees": {
+      "type": "component",
+      "repeatable": true,
+      "component": "fees.registration-fees"
+    },
+    "registration_fees": {
+      "displayName": "registration_fees",
+      "type": "component",
+      "repeatable": true,
+      "component": "reg.registration-fees"
+    }
+  }
+}

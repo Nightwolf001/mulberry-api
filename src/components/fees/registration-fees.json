@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_fees_registration_fees",
+  "info": {
+    "displayName": "school_fees",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "daily": {
+      "type": "string"
+    },
+    "monthly": {
+      "type": "string"
+    },
+    "termly": {
+      "type": "string"
+    },
+    "annual": {
+      "type": "string"
+    }
+  }
+}
